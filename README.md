@@ -13,14 +13,15 @@ Compter les parkings accessibles au public : Écrire une fonction qui compte com
 ## Exo 2
 Afficher 2 listes : 
 - Une liste contiendra le nom des parkings qui sont accessibles au public
-- Une liste contiendra le nom des parkings qui ne sont pas accessibles au public
+- Une liste contiendra le nom des parkings qui ne sont pas accessibles au public<br>
 *(Possibilité de démarrer en se basant sur l'algorithme développé à l'exo 1)*
 
 Voici les étapes à suivre :
 - Créer deux listes vides : public_parkings et private_parkings (voir comment déclarer des listes en python).
 - Parcourir les données JSON et, pour chaque parking, vérifier la valeur de publicaccess (voir exo 1).
-- Si publicaccess est true, ajouter le name du parking à public_parkings. Si publicaccess est false, ajouter le name du parking à private_parkings. 
-    *Pour ajouter un élément à une liste, on utilise la méthode .append sur une liste. Par exemple : public_parkings.append("MON_SUPER_PARKING") va ajouter MON_SUPER_PARKING à la liste public_parkings. Les noms des parkings sont sous `['values']['name']`*
+- Si publicaccess est true, ajouter le name du parking à public_parkings. Si publicaccess est false, ajouter le name du parking à private_parkings.
+  - *Pour ajouter un élément à une liste, on utilise la méthode .append sur une liste. Par exemple : public_parkings.append("MON_SUPER_PARKING") va ajouter MON_SUPER_PARKING à la liste public_parkings.*
+  - *Les noms des parkings sont sous `['values']['name']`*
 - Une fois tous les parkings traités, imprimer les deux listes.
 
 ## Exo 3
