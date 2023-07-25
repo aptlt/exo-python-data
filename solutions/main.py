@@ -29,9 +29,23 @@ def exo1(data):
             count += 1
     
     print(f"Nombre de parkings accessibles au public : {count}")
-
+    
 
 def exo2(data):
+    public_parkings = []
+    private_parkings = []
+
+    for parking in data['values']:
+        if parking['publicaccess']:
+            public_parkings.append(parking['name'])
+        else:
+            private_parkings.append(parking['name'])
+
+    print(f"Liste des parkings publics : {public_parkings}")
+    print(f"Liste des parkings privés : {private_parkings}")
+
+
+def exo3(data):
     parkings_per_district = {}
 
     for parking in data['values']:
@@ -50,7 +64,7 @@ def exo2(data):
         print(f"{district} : {count} parkings disponibles.")
 
 
-def exo3(data):
+def exo4(data):
     # On définit le prix min à 'infini'
     min_price = float('inf')
     cheapest_parking = None
@@ -67,7 +81,7 @@ def exo3(data):
     print(f"Parking mensuel le moins cher : {cheapest_parking}.\nPrix : {min_price}")
 
 
-def exo4(data):
+def exo5(data):
     # Initialiser le dictionnaire pour stocker les prix pour chaque type de tarification
     prices_by_type = {}
 
